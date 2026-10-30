@@ -197,6 +197,9 @@ pub const ICON_PANELS: &[(&str, &str, &str)] = &[
     (crate::panels::asset_export::ID, "Asset Export", "share-2"),
     (crate::panels::css_properties::ID, "CSS Properties", "globe"),
     (crate::panels::variables::ID, "Variables", "chart-column"),
+    (crate::addons::cleanup::ID, "Artwork Cleanup", "sparkles"),
+    (crate::addons::color::ID, "Color Effects", "sun"),
+    (crate::addons::pathtools::ID, "Anchor Inspector", "dc-anchor-smooth"),
 ];
 
 /// Groups of icon panels separated by dividers in the collapsed column.

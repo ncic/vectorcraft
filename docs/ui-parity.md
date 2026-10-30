@@ -1,6 +1,6 @@
 # UI and interaction parity
 
-> **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-30 · **Change:** minor (Pencil Edit Selected Paths: strokes lifted away, carving, loops, closing over open ends, compound paths, a preview of the stroke as drawn (#3793); scores and estimates unchanged; previously: Spinners: a held arrow repeats after a pause (#4267); scores unchanged) · **Target:** Adobe Illustrator 2026 (30.x)
+> **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-30 · **Change:** minor (Pencil Edit Selected Paths: strokes lifted away, carving, loops, closing over open ends, compound paths, a preview of the stroke as drawn (#3793); scores and estimates unchanged; previously: Path Precision Tools add-on: its tools, Anchor Inspector panel and Object › Plug-ins submenu; scores unchanged) · **Target:** Adobe Illustrator 2026 (30.x)
 
 ## Feature submission evidence
 
@@ -321,6 +321,9 @@ next unit in the order a right-click on a ruler lists them, from Feet back to Po
 | Preferences › General › Constrain Angle | done | arrow keys and Shift drags along the turned axes; the Rectangle, Rounded Rectangle, Ellipse and grid tools, point and area type and the shape size dialogs draw along them with the bounding box turned; Shift-drawn polygons and stars keep the turned base orientation; the Line Segment tool's Shift steps count from it (#394, <https://helpx.adobe.com/illustrator/desktop/manage-objects/arrange-objects/rotate-objects-by-specific-angles.html>); arcs, spirals, flares and Pen paths are not turned |
 | Tabs panel: a stop drags from where the press landed, a stop just added included | done | #1458 |
 | Outline view keeps template layers in Preview, dimmed | done | #1486; a picture placed to be traced stays visible under the outlines |
+| Path Precision Tools add-on (VectorCraft addition): Object › Plug-ins › Path Precision Tools selects its three tools (Anchor Eraser Brush, Extend Path, Measure & Inspect), which the All Tools drawer lists under their own heading but neither toolbar shows as shipped, opens the Anchor Inspector panel (the selected anchor's X/Y and handle lengths and angles as fields; Make Smooth, Make Corner, Equalize Handles, Remove Points Keep Shape, Add Points, the three ways to close) and runs Add Points at / Split at Crossings; a double-click on the brush or Extend Path tool opens its options | done | `addon.pathtools.*`, `crates/tools/src/addons/`, `crates/ui-egui/src/addons/pathtools.rs` and their tests; not an Illustrator feature, so it is not scored |
+| Artwork Cleanup add-on (VectorCraft addition): Object › Plug-ins › Artwork Cleanup opens its panel, which checks the selection or the document for 16 kinds of issue, lists them with counts, and shows or fixes the picked rows or all of them, each fix one undo step; Simplify Anchors (Keep Shape), Rejoin Path Pieces and Deep Ungroup open their options first | done | `addon.cleanup.*`, `crates/ui-egui/src/addons/cleanup.rs` and its tests; not an Illustrator feature, so it is not scored |
+| Color Effects add-on (VectorCraft addition): live Exposure, Desaturate and Invert Colors in Effect › Color Effects and Object › Plug-ins › Color Effects; its panel picks a colour adjustment and its values and adds it as a live effect or applies it as a filter, into the colours, as one undo step | done | `addon.color.*`, `crates/ui-egui/src/addons/color.rs` and its tests; not an Illustrator feature, so it is not scored |
 
 ## Look and feel
 
@@ -361,6 +364,9 @@ separate. Scores and hours unchanged. [Behavior and command details](development
 
 | Date | Change | Summary |
 |---|---|---|
+| 2026-10-30 | minor | Path Precision Tools add-on (a VectorCraft addition): its tools, Anchor Inspector panel and Object › Plug-ins › Path Precision Tools; scores and estimates unchanged |
+| 2026-10-30 | minor | Color Effects add-on: its effects, panel and Object › Plug-ins submenu; scores and estimates unchanged |
+| 2026-10-30 | minor | Artwork Cleanup add-on (a VectorCraft addition): its panel and Object › Plug-ins › Artwork Cleanup; scores and estimates unchanged |
 | 2026-10-30 | minor | Spinners: a held arrow repeats after a pause (#4267); scores and estimates unchanged |
 | 2026-10-30 | minor | Control bar: a Replace menu swaps the selected symbol instances' symbol (#4121); scores and estimates unchanged |
 | 2026-10-30 | minor | Color Mixer popover: the Color panel's menu with its color modes (#4249); scores and estimates unchanged |
